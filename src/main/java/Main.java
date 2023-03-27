@@ -23,12 +23,12 @@ public class Main {
             PrintWriter out = new PrintWriter(clientSocket.getOutputStream());
 
             //Reading client input
-            String line = in.readLine();
-            String stringStart = "+";
-            String end = "\r\n";
+//            String line = in.readLine();
+//            String stringStart = "+";
+//            String end = "\r\n";
 
             //Responding to client input
-            out.println("+PONG\r\n");
+            out.println("+PONG"+"\r\n");
 
 
             out.flush();
