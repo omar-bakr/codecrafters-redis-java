@@ -28,7 +28,7 @@ public class Main {
 //            String end = "\r\n";
 
             //Responding to client input
-            out.println("+PONG"+"\r\n");
+            out.println("+PONG"+"\r");
 
 
             out.flush();
