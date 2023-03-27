@@ -24,13 +24,15 @@ public class Main {
 
             //Reading client input
             String line = in.readLine();
+            String stringStart = "+";
+            String end = "\r\n";
 
             //Responding to client input
-            out.println("PONG");
+            out.println(stringStart + "PONG" + end);
 
 
             out.flush();
-            
+
         } catch (IOException e) {
             System.out.println("IOException: " + e.getMessage());
         } finally {
