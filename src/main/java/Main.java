@@ -35,7 +35,7 @@ public class Main {
             for (int i = 0; i < words.length; i++) {
                 response.append(stringStart + pingResponse + responseEnd);
             }
-            out.println(response);
+            out.print(response);
 
             out.flush();
 

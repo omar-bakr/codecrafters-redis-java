@@ -9,7 +9,11 @@ public class Test {
         String responseEnd = "\r\n";
         String pingResponse = "PONG";
 
-
+        StringBuilder response = new StringBuilder();
+        for (int i = 0; i < words.length; i++) {
+            response.append(stringStart + pingResponse + responseEnd);
+        }
+        System.out.println(response);
     }
 
 }
