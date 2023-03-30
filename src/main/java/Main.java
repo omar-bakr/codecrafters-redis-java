@@ -23,19 +23,16 @@ public class Main {
             PrintWriter out = new PrintWriter(clientSocket.getOutputStream());
 
 //            Reading client input
-            String input = in.readLine();
-            String[] words = input.split(System.lineSeparator());
+
 
             String stringStart = "+";
             String responseEnd = "\r\n";
             String pingResponse = "PONG";
 
             //Responding to client input
-            StringBuilder response = new StringBuilder();
-            for (int i = 0; i < words.length; i++) {
-                response.append(stringStart + pingResponse + responseEnd);
+            while (in.readLine() != null) {
+                out.print(stringStart + pingResponse + responseEnd);
             }
-            out.print(response);
 
             out.flush();
 
