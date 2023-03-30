@@ -30,10 +30,13 @@ public class Main {
             String pingResponse = "PONG";
 
             //Responding to client input
-            while (in.readLine() != null) {
-                out.print(stringStart + pingResponse + responseEnd);
-            }
+            String line;
+            while ((line = in.readLine()) != null) {
+                if (line.equalsIgnoreCase("ping")) {
+                    out.print(stringStart + pingResponse + responseEnd);
 
+                }
+            }
             out.flush();
 
         } catch (IOException e) {
