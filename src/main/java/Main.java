@@ -1,7 +1,6 @@
 import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
-import java.util.Collections;
 
 public class Main {
     public static void main(String[] args) {
@@ -32,8 +31,12 @@ public class Main {
             String pingResponse = "PONG";
 
             //Responding to client input
-            String response=stringStart + "PONG" + responseEnd;
-            out.println(Collections.nCopies(words.length,response));
+            StringBuilder response = new StringBuilder();
+            for (int i = 0; i < words.length; i++) {
+                response.append(stringStart + pingResponse + responseEnd);
+            }
+            out.println(response);
+
             out.flush();
 
         } catch (IOException e) {
