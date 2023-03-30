@@ -34,10 +34,12 @@ public class Main {
             while ((line = in.readLine()) != null) {
                 if (line.equalsIgnoreCase("ping")) {
                     out.print(stringStart + pingResponse + responseEnd);
+                    out.flush();
 
                 }
             }
-            out.flush();
+            clientSocket.close();
+
 
         } catch (IOException e) {
             System.out.println("IOException: " + e.getMessage());
