@@ -31,10 +31,8 @@ public class Main {
             String pingResponse = "PONG";
 
             //Responding to client input
-            for (int i = 0; i < words.length; i++) {
-                out.print(stringStart + "PONG" + responseEnd);
-            }
-
+            String response=stringStart + "PONG" + responseEnd;
+            out.println(response.repeat(words.length));
             out.flush();
 
         } catch (IOException e) {
