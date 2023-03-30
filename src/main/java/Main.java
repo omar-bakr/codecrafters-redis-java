@@ -22,14 +22,18 @@ public class Main {
             BufferedReader in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
             PrintWriter out = new PrintWriter(clientSocket.getOutputStream());
 
-            //Reading client input
-//            String line = in.readLine();
-//            String stringStart = "+";
-//            String end = "\r\n";
+//            Reading client input
+            String input = in.readLine();
+            String[] words = input.split(System.lineSeparator());
+
+            String stringStart = "+";
+            String responseEnd = "\r\n";
+            String pingResponse = "PONG";
 
             //Responding to client input
-            out.println("+PONG"+"\r");
-
+            for (int i = 0; i < words.length; i++) {
+                out.print(stringStart + "PONG" + responseEnd);
+            }
 
             out.flush();
 
